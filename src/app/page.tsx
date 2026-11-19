@@ -108,9 +108,12 @@ export default function HomePage() {
               Vidéos
             </h2>
             <div className="mt-8">
-              <Button href="/videos" variant="gold">
+              <span
+                aria-disabled="true"
+                className="inline-flex cursor-default items-center justify-center gap-2 bg-[#917812] px-6 py-3 text-sm font-medium uppercase tracking-[0.14em] text-white"
+              >
                 Voir les vidéos
-              </Button>
+              </span>
             </div>
           </div>
 
