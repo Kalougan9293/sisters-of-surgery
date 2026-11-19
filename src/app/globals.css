@@ -194,6 +194,7 @@ body {
 .btn-shine {
   position: relative;
   isolation: isolate;
+  overflow: hidden;
 }
 
 .btn-shine::before {

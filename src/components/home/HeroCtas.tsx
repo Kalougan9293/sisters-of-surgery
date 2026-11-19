@@ -18,7 +18,7 @@ export function HeroCtas() {
             spawnHearts(e.clientX, e.clientY, 4);
             setQuizOpen(true);
           }}
-          className="btn-shine inline-flex h-auto min-h-[3.25rem] w-full touch-manipulation flex-row items-center justify-center gap-2 overflow-visible rounded-sm px-2 py-2.5 text-center text-[12px] font-semibold leading-tight text-white transition-all duration-300 sm:px-3 sm:text-sm"
+          className="btn-shine inline-flex h-auto min-h-[3.25rem] w-full touch-manipulation flex-row items-center justify-center gap-2 overflow-hidden rounded-sm px-2 py-2.5 text-center text-[12px] font-semibold leading-tight text-white transition-all duration-300 sm:px-3 sm:text-sm"
           style={{
             backgroundColor: "#F25C8A",
             boxShadow: "0 12px 32px -10px rgba(242, 92, 138, 0.65)",
