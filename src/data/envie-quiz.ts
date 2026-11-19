@@ -10,7 +10,7 @@ export interface QuizQuestion {
   options: QuizOption[];
 }
 
-/** Entonnoir « Votre envie » — 5 questions + coordonnées. */
+/** Entonnoir « Votre envie » — 3 questions + coordonnées (= 4 étapes). */
 export const envieQuestions: QuizQuestion[] = [
   {
     id: "zone",
@@ -44,27 +44,6 @@ export const envieQuestions: QuizQuestion[] = [
       { id: "medecine", label: "La médecine esthétique" },
       { id: "les-deux", label: "Les deux" },
       { id: "ne-sait-pas", label: "Je ne sais pas encore" },
-    ],
-  },
-  {
-    id: "lieu",
-    prompt: "Tu envisages plutôt…",
-    options: [
-      { id: "france", label: "En France" },
-      { id: "etranger", label: "À l’étranger" },
-      { id: "les-deux", label: "Les deux" },
-      { id: "pas-avis", label: "Pas encore d’avis" },
-    ],
-  },
-  {
-    id: "priorite",
-    prompt: "Ton besoin prioritaire, c’est…",
-    options: [
-      { id: "comprendre", label: "Comprendre une intervention" },
-      { id: "prix", label: "Les prix indicatifs" },
-      { id: "suites", label: "Les suites & la récupération" },
-      { id: "temoignages", label: "Des témoignages" },
-      { id: "orientation", label: "Être orienté(e)" },
     ],
   },
 ];

@@ -118,7 +118,7 @@ export function EnvieQuiz({
           <div className="px-10 text-center">
             <p
               id={titleId}
-              className="font-script text-[2.35rem] text-bordeaux"
+              className="font-script text-[2.35rem] text-[#F25C8A]"
               style={{
                 lineHeight: 1.35,
                 paddingTop: "0.35rem",
