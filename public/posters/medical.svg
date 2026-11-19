@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B8867A"/>
+      <stop offset="100%" style="stop-color:#F7E8E4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <circle cx="980" cy="180" r="220" fill="#FFF8F6" opacity="0.45"/>
+  <circle cx="200" cy="560" r="160" fill="#9C5A4E" opacity="0.1"/>
+  <text x="80" y="320" font-family="Georgia, serif" font-size="28" fill="#9C5A4E">Sisters of Surgery</text>
+  <text x="80" y="390" font-family="Georgia, serif" font-size="40" fill="#3D2420">Explications médicales</text>
+  <text x="80" y="440" font-family="Arial, sans-serif" font-size="18" fill="#6B4A42">Contenu fictif de démonstration</text>
+</svg>

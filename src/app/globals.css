@@ -1,26 +1,233 @@
 @import "tailwindcss";
 
+/* Charte Sisters of Surgery — dusty rose / nude / rose gold */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ivory: #f7e8e4;
+  --ivory-deep: #efd9d3;
+  --beige: #e8c9c0;
+  --nude: #d8a499;
+  --nude-deep: #b8867a;
+  --bordeaux: #9c5a4e;
+  --bordeaux-soft: #b87366;
+  --bronze: #7a453c;
+  --ink: #3d2420;
+  --ink-soft: #6b4a42;
+  --muted: #9a7a72;
+  --line: rgba(61, 36, 32, 0.1);
+  --white: #fff8f6;
+  --background: var(--ivory);
+  --foreground: var(--ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ivory: var(--ivory);
+  --color-ivory-deep: var(--ivory-deep);
+  --color-beige: var(--beige);
+  --color-nude: var(--nude);
+  --color-nude-deep: var(--nude-deep);
+  --color-bordeaux: var(--bordeaux);
+  --color-bordeaux-soft: var(--bordeaux-soft);
+  --color-bronze: var(--bronze);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-cream: var(--white);
+  --font-serif: var(--font-editorial);
+  --font-sans: var(--font-body);
+  --font-script: var(--font-script);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  background-image:
+    radial-gradient(ellipse 90% 55% at 0% -10%, rgba(242, 213, 206, 0.9), transparent 55%),
+    radial-gradient(ellipse 70% 45% at 100% 0%, rgba(216, 164, 153, 0.28), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(156, 90, 78, 0.06), transparent 55%);
+  background-attachment: fixed;
 }
+
+::selection {
+  background: color-mix(in srgb, var(--bordeaux) 28%, transparent);
+  color: var(--ink);
+}
+
+.font-serif {
+  font-family: var(--font-editorial), Georgia, "Times New Roman", serif;
+}
+
+.font-script {
+  font-family: var(--font-script), "Segoe Script", cursive;
+}
+
+/* Les plumes (Great Vibes) débordent : ne jamais clipper */
+.font-script-safe {
+  font-family: var(--font-script), "Segoe Script", cursive;
+  line-height: 1.5;
+  overflow: visible;
+  padding-block: 0.15em 0.05em;
+}
+
+.editorial-rule {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--bordeaux) 45%, transparent),
+    transparent
+  );
+}
+
+.glass-panel {
+  background: color-mix(in srgb, var(--white) 82%, transparent);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+}
+
+.satin-surface {
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--peach, #f2d5ce) 55%, var(--white)),
+      var(--ivory-deep) 45%,
+      color-mix(in srgb, var(--nude) 35%, var(--white))
+    );
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-scale {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-soft-scale {
+  animation: soft-scale 1s ease-out both;
+}
+
+.delay-1 {
+  animation-delay: 0.12s;
+}
+.delay-2 {
+  animation-delay: 0.24s;
+}
+.delay-3 {
+  animation-delay: 0.36s;
+}
+
+.prose-esthe p {
+  margin-bottom: 1.1rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+
+/* Un seul geste fluide : monte + fond en douceur (pas de 2 temps) */
+@keyframes heart-pop {
+  0% {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0) scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(
+        calc(-50% + var(--drift, 0px)),
+        calc(-50% - 52px),
+        0
+      )
+      scale(1);
+  }
+}
+
+.heart-pop {
+  animation-name: heart-pop;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  line-height: 1;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* Reflet qui passe toutes les 3s */
+@keyframes btn-shine {
+  0% {
+    transform: translateX(-140%) skewX(-20deg);
+  }
+  18% {
+    transform: translateX(220%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+  }
+}
+
+.btn-shine {
+  position: relative;
+  isolation: isolate;
+}
+
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  border-radius: inherit;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 248, 246, 0.15) 35%,
+    rgba(255, 255, 255, 0.55) 50%,
+    rgba(255, 248, 246, 0.15) 65%,
+    transparent 100%
+  );
+  animation: btn-shine 3s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.btn-shine > * {
+  position: relative;
+  z-index: 2;
+}
+

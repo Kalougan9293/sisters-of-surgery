@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# Sisters of Surgery
 
-## Getting Started
+Média international d’information sur la chirurgie esthétique — démonstration Next.js.
 
-First, run the development server:
+**Beauty · Aesthetics · Confidence**
+
+## Charte couleur
+
+| Token | Hex | Usage |
+|-------|-----|--------|
+| Blush | `#F7E8E4` | Fond principal |
+| Peach | `#F2D5CE` | Lumières / highlights |
+| Nude | `#D8A499` | Accents soyeux |
+| Nude deep | `#B8867A` | Ombres textiles |
+| Rose gold | `#9C5A4E` | CTA, logos, accents |
+| Bronze | `#7A453C` | Hover / profondeur |
+| Ink | `#3D2420` | Texte |
+
+Typo : script *Great Vibes* (« Sisters ») + serif *Cormorant Garamond* (« of Surgery ») + sans *Outfit*.
+
+## Lancer en local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contenus
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Données locales dans `src/data/` · médias dans `public/videos`, `public/images`, `public/posters`.
