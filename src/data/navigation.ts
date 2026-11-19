@@ -1,9 +1,8 @@
 import type { NavItem } from "./types";
 
 export const mainNav: NavItem[] = [
-  { label: "Vidéos", href: "/videos" },
-  { label: "Interventions", href: "/interventions" },
-  { label: "Chirurgie à l'étranger", href: "/chirurgie-etranger" },
-  { label: "Prix par pays", href: "/prix" },
-  { label: "Questions fréquentes", href: "/faq" },
+  { label: "Accueil", href: "/" },
+  { label: "Le concept", href: "/#concept" },
+  { label: "Vidéos", href: "/#podcast" },
+  { label: "Contact", href: "/#contact" },
 ];

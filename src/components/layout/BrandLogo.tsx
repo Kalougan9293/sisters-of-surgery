@@ -5,38 +5,40 @@ import { cn } from "@/lib/utils";
 
 export function BrandLogo({
   className,
-  compact = false,
+  variant = "light",
 }: {
   className?: string;
-  compact?: boolean;
+  variant?: "light" | "dark";
 }) {
   const pathname = usePathname();
+  const onDark = variant === "dark";
 
   function goHome(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
     if (pathname === "/") {
-      window.scrollTo(0, 0);
-      window.location.reload();
+      window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
     window.location.href = "/";
   }
 
   return (
-    <a href="/" onClick={goHome} className={cn("group shrink-0", className)}>
-      <span className="flex flex-col leading-none">
-        <span className="font-script text-[1.65rem] leading-none text-bordeaux transition group-hover:text-bronze md:text-[1.85rem]">
-          Sisters
-        </span>
-        <span className="mt-0.5 font-serif text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-ink md:text-[0.78rem]">
-          of Surgery
-        </span>
+    <a
+      href="/"
+      onClick={goHome}
+      className={cn("group shrink-0", className)}
+      aria-label="Sisters of Surgery — Accueil"
+    >
+      <span
+        className={cn(
+          "font-display text-[0.78rem] font-semibold uppercase tracking-[0.18em] transition sm:text-[0.85rem]",
+          onDark
+            ? "text-[#e8c547] group-hover:text-[#f0d56a]"
+            : "text-[#1a1a1a] group-hover:text-[#917812]",
+        )}
+      >
+        Sisters Of Surgery
       </span>
-      {!compact && (
-        <span className="mt-1.5 block text-[9px] uppercase tracking-[0.22em] text-muted">
-          Beauty · Aesthetics · Confidence
-        </span>
-      )}
     </a>
   );
 }

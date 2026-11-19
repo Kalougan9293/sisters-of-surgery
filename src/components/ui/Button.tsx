@@ -1,17 +1,15 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type Variant = "primary" | "secondary" | "ghost" | "outline";
+type Variant = "primary" | "secondary" | "ghost" | "outline" | "gold";
 
 const variants: Record<Variant, string> = {
-  primary:
-    "bg-bordeaux text-cream hover:bg-bordeaux-soft shadow-[0_10px_30px_-12px_rgba(156,90,78,0.5)]",
-  secondary:
-    "bg-ink text-cream hover:bg-ink-soft",
-  ghost:
-    "bg-transparent text-ink hover:bg-ivory-deep",
+  primary: "bg-[#1a1a1a] text-white hover:bg-black",
+  secondary: "bg-white text-[#1a1a1a] hover:bg-[#f7f5f0]",
+  ghost: "bg-transparent text-[#1a1a1a] hover:bg-[#ebe7df]",
   outline:
-    "border border-ink/15 bg-cream/60 text-ink hover:border-bordeaux/40 hover:text-bordeaux",
+    "border border-[#1a1a1a]/20 bg-transparent text-[#1a1a1a] hover:border-[#1a1a1a]/50",
+  gold: "bg-[#917812] text-white hover:bg-[#b89a2e] tracking-[0.14em] uppercase",
 };
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -22,14 +20,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export function Button({
-  variant = "primary",
+  variant = "gold",
   href,
   className,
   children,
   ...props
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-sm px-5 py-2.5 text-sm tracking-wide transition-all duration-300",
+    "inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium transition-all duration-300",
     variants[variant],
     className,
   );

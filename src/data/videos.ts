@@ -8,12 +8,12 @@ export const videos: Video[] = [
   {
     id: "v1",
     slug: "bienvenue-sisters-of-surgery",
-    title: "Bienvenue sur le blog Sisters Of Surgery !",
+    title: "Sisters of Surgery — le podcast",
     description:
-      "Ici, on décrypte la chirurgie esthétique avec clarté : les gestes, les parcours, les idées reçues et les questions que tout le monde se pose.",
+      "Décryptage indépendant de la chirurgie et de la médecine esthétique, avec Sabrina & Suzie.",
     category: "explications-medicales",
-    duration: "0:10",
-    durationSeconds: 10,
+    duration: "0:08",
+    durationSeconds: 8,
     publishedAt: "2026-11-19",
     views: 42890,
     featured: true,
