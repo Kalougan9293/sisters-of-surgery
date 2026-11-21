@@ -34,7 +34,7 @@ export function BrandLogo({
           "font-display text-[0.78rem] font-semibold uppercase tracking-[0.18em] transition sm:text-[0.85rem]",
           onDark
             ? "text-[#e8c547] group-hover:text-[#f0d56a]"
-            : "text-[#1a1a1a] group-hover:text-[#917812]",
+            : "text-[#6e5420] group-hover:text-[#8a6a28]",
         )}
       >
         Sisters Of Surgery

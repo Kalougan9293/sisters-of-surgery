@@ -210,7 +210,7 @@ export function EnvieQuiz({
                 />
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-bordeaux py-3.5 text-sm font-medium text-cream"
+                  className="btn-cta w-full px-5 py-2.5"
                 >
                   Envoyer
                 </button>

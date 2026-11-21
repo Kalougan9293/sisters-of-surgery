@@ -21,6 +21,7 @@
   --nude-deep: #9a9284;
   --background: #f7f5f0;
   --foreground: #1a1a1a;
+  --header-beige: #e8d5bc;
 }
 
 @theme inline {
@@ -47,8 +48,21 @@
   --font-serif: var(--font-display);
 }
 
-* {
-  border-color: rgba(26, 26, 26, 0.12);
+/* Ne pas forcer border-color sur * : ça écrase les utilitaires Tailwind (liseré or, etc.) */
+
+.btn-cta {
+  background-color: var(--header-beige) !important;
+  color: #3d2a14 !important;
+  border: none !important;
+  box-shadow: 0 0 0 2px #917812 !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+.btn-cta:hover {
+  filter: brightness(0.96);
 }
 
 html {
